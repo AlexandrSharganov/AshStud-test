@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrap header__wrap">
+            <a href="#" class="header__logo">
+                <img src="/images/logo.svg" alt="LOGOTYPE">
+            </a>
+            <div class="header__search">
+                <button class="header__search-btn"></button>
+                <form action="post" class="header__search-form hide"> 
+                    <input type="text" class="header__search-form-input">
+                </form>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <nav class="menu">
+        <div class="wrap menu__wrap">
+            <ul class="menu__links">
+                <li class="menu__links-item">
+                   <span>Demos</span>
+                   <ul class="menu__submenu">
+                        <li class="menu__submenu-item">Demo 1</li>
+                        <li class="menu__submenu-item">Demo 2</li>
+                        <li class="menu__submenu-item">Demo 3</li>
+                    </ul>
+                </li>
+                <li class="menu__links-item">
+                    <span>Post</span>
+                    <ul class="menu__submenu">
+                        <li class="menu__submenu-item">Post Header</li>
+                        <li class="menu__submenu-item">Post Layout</li>
+                        <li class="menu__submenu-item">Share Buttons</li>
+                        <li class="menu__submenu-item">Gallery Post</li>
+                        <li class="menu__submenu-item">Video Post</li>
+                    </ul>
+                </li>
+                <li class="menu__links-item">
+                    <span>Features</span>
+                    <ul class="menu__submenu">
+                        <li class="menu__submenu-item">Feature1</li>
+                        <li class="menu__submenu-item">Feature2</li>
+                        <li class="menu__submenu-item">Feature3</li>
+                        <li class="menu__submenu-item">Feature4</li>
+                    </ul>
+                </li>
+                <li class="menu__links-item">
+                    <span>Categories</span>
+                    <ul class="menu__submenu">
+                        <li class="menu__submenu-item">Category1</li>
+                        <li class="menu__submenu-item">Category2</li>
+                        <li class="menu__submenu-item">Category3</li>
+                    </ul>
+                </li>
+                <li class="menu__links-item">
+                    <span>Shop</span>
+                     <ul class="menu__submenu">
+                        <li class="menu__submenu-item">Shop 1</li>
+                        <li class="menu__submenu-item">Shop 2</li>
+                    </ul>
+                </li>
+                <li class="menu__links-item">Buy Now</li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+    <div class="posts">
+        <div class="wrap posts__wrap js-posts"></div>
+    </div>
+
+    <script defer src="main.js"></script>
+</body>
+</html>
