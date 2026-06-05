@@ -12,6 +12,23 @@ const popup = document.querySelector('.js-popup');
 const popupTitle = popup.querySelector('h3');
 const popupText = popup.querySelector("p");
 
+const burger = document.querySelector('.js-burger');
+const mobileMenu = document.querySelector('.js-mobile-menu');
+const overlay = document.querySelector('.js-mobile-overlay');
+const closeBtn = document.querySelector('.js-mobile-close');
+
+function openMenu() {
+    mobileMenu.classList.add('active');
+}
+
+function closeMenu() {
+    mobileMenu.classList.remove('active');
+}
+
+burger.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
 function renderPosts(posts) {
     postsBlock.innerHTML = "";
 
