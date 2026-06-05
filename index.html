@@ -16,14 +16,13 @@
                 <img src="/images/logo.svg" alt="LOGOTYPE">
             </a>
             <div class="header__search">
-                <button class="header__search-btn"></button>
-                <form action="post" class="header__search-form hide"> 
-                    <input type="text" class="header__search-form-input">
+                <button class="header__search-btn js-search-btn"></button>
+                <form action="post" class="header__search-form hide js-search-form"> 
+                    <input type="text" class="header__search-form-input js-search-input" placeholder="Search...">
                 </form>
             </div>
         </div>
     </header>
-    <hr>
     <nav class="menu">
         <div class="wrap menu__wrap">
             <ul class="menu__links">
@@ -73,9 +72,16 @@
             </ul>
         </div>
     </nav>
-    <hr>
     <div class="posts">
         <div class="wrap posts__wrap js-posts"></div>
+    </div>
+
+    <div class="popup js-popup hide">
+        <div class="popup__wrap">
+            <button class="popup__close-btn">×</button>
+            <h3 class="popup__title">Fun Things to Do in Rome</h3>
+            <p class="popup__text">Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…</p>
+        </div>
     </div>
 
     <script defer src="main.js"></script>
