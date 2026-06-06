@@ -4,30 +4,39 @@ const searchInput = document.querySelector('.js-search-input');
 const menu = document.querySelector('.menu');
 const searchBtn = document.querySelector('.js-search-btn');
 const searchForm = document.querySelector('.js-search-form');
-
-let allPosts = [];
-let lastScrollY = window.scrollY;
-
 const popup = document.querySelector('.js-popup');
 const popupTitle = popup.querySelector('h3');
 const popupText = popup.querySelector("p");
-
 const burger = document.querySelector('.js-burger');
 const mobileMenu = document.querySelector('.js-mobile-menu');
-const overlay = document.querySelector('.js-mobile-overlay');
 const closeBtn = document.querySelector('.js-mobile-close');
+let allPosts = [];
+let lastScrollY = window.scrollY;
+let isMobileMenuOpen = false;
 
-function openMenu() {
+burger.addEventListener('click', () => {
+    isMobileMenuOpen = true;
     mobileMenu.classList.add('active');
-}
+    document.body.style.overflow = "hidden";
+});
 
 function closeMenu() {
+    isMobileMenuOpen = false;
     mobileMenu.classList.remove('active');
+    document.body.style.overflow = "auto";
 }
 
-burger.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
+mobileMenu.addEventListener('click', (event) => {
+    if (event.target.classList.contains('js-mobile-close') || event.target.classList.contains('js-mobile-menu')) {
+       closeMenu();
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && isMobileMenuOpen) {
+        closeMenu();
+    }
+});
 
 function renderPosts(posts) {
     postsBlock.innerHTML = "";
@@ -95,7 +104,6 @@ function loadingPosts() {
   .then(posts => {
     allPosts = posts;
     renderPosts(posts);
-    
   })
   .catch(error => {
     console.error('Ошибка:', error);

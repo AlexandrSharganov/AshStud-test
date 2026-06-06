@@ -15,7 +15,7 @@ body {
 
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
 }
@@ -62,7 +62,7 @@ img {
 }
 
 .header__search-form-input {
-    padding: 5px 10px;
+    padding: 0.3rem 0.6rem;
     border: 1px solid #e9e9e9;
     font-size: 0.75rem;
 }
@@ -130,11 +130,11 @@ img {
 }
 
 .menu__submenu {
-    padding: 20px;
+    padding: 0.75rem 1.25rem 0.7rem;
     position: absolute;
     top: 100%;
     display: none;
-    width: 176px;
+    width: 11rem;
     list-style: none;
     background-color: #fff;
     border: 1px solid #e9e9e9;
@@ -146,6 +146,7 @@ img {
 
 .menu__submenu-item {
     position: relative;
+    padding: 0.5rem 0 0.56rem;
     display: block;
     font-weight: 400;
     font-size: 0.8rem;
@@ -155,15 +156,14 @@ img {
 
 .menu__submenu-item:hover {
     color: #969696;
-}
-
-.menu__submenu-item:not(:last-of-type) {
-    margin-bottom: 8px;
+    padding-left: 0.5rem;
 }
 
 .menu__submenu-item:not(:last-of-type)::after {
     content: "";
-    margin-top: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: block;
     height: 1px;
     width: 100%;
@@ -201,7 +201,7 @@ img {
     top: 0;
     left: 0;
     height: 100%;
-    max-width: 320px;
+    max-width: 20rem;
     width: 100%;
     background: #fff;
     transform: translateX(-100%);
@@ -221,17 +221,19 @@ img {
     display: none;
     background: none;
     border: none;
-    font-size: 24px;
+    width: 28px;
+    height: 20px;
+    background: url('/images/burger-icon.svg') no-repeat center / contain;
     cursor: pointer;
 }
 
 .mobile-menu__links {
     list-style-type: none;
-    padding: 0 20px 20px;
+    padding: 1.1rem 1.25rem 1.25rem;
 }
 
 .mobile-menu__links-item {
-    padding: 1rem 0;
+    padding: 1.05rem 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -262,22 +264,22 @@ img {
 }
 
 .mobile-menu__logo {
-    margin: 0 20px; /* ПРОВЕРИТЬ */
     display: block;
     max-width: 10rem;
     width: 100%;
-    height: 24px;
+    height: 1.5rem;
 }
 
 .mobile-menu__header {
     position: relative;
-    padding: 32px 0 25px;
+    padding: 2rem 1.25rem 1.6rem;
 }
 
 .mobile-menu__header::after {
     content: "";
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 1px;
     background-color: #e9e9e9;
@@ -285,17 +287,13 @@ img {
 
 .mobile-menu__close {
     position: absolute;
-    top: 35px;
-    right: 20px;
-    width: 18px;
-    height: 18px;
+    top: 2.2rem;
+    right: 1.25rem;
+    width: 20px;
+    height: 20px;
     border: none;
-    background: none;
+    background: url('images/close-icon.svg') no-repeat center / contain;
     cursor: pointer;
-    font-size: 24px;
-}
-
-.posts {
 }
 
 .posts__wrap {
@@ -325,7 +323,7 @@ img {
 .posts__item-title {
     font-weight: 700;
     font-size: 1.4rem;
-    line-height: 140%;
+    line-height: 138%;
     color: #000;
 }
 
@@ -361,9 +359,7 @@ img {
     display: inline-block;
     width: 3px;
     height: 3px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='3' viewBox='0 0 3 3'%3E%3Ccircle cx='1.5' cy='1.5' r='1.5' fill='%23D7D7D7'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='3' viewBox='0 0 3 3'%3E%3Ccircle cx='1.5' cy='1.5' r='1.5' fill='%23D7D7D7'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 .posts__item-text {
@@ -389,16 +385,16 @@ img {
 
 .popup__wrap {
     position: relative;
-    padding: 40px 20px;
-    max-width: 300px;
+    padding: 2.5rem 1.25rem;
+    max-width: 18.75rem;
     width: 100%;
     background-color: #fff;
 }
 
 .popup__close-btn {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0.6rem;
+    top: 0.6rem;
     border: none;
     background: none;
     font-size: 1rem;
@@ -427,5 +423,42 @@ img {
 
     .menu {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        width: 90%;
+    }
+
+    .posts__wrap {
+        padding: 0.5rem 0 2rem;
+        gap: 30px 40px;
+    }
+
+    .posts__item-img {
+        height: 14.4rem;
+    }
+
+    .header {
+        padding: 2rem 0 1.86rem;
+    }
+
+    .header__wrap {
+        position: relative;
+    }
+
+    .header__logo {
+        max-width: 10rem;
+        width: 100%;
+        height: 1.5rem;
+    }
+
+    .header__search-form {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
     }
 }
