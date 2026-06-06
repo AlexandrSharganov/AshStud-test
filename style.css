@@ -54,7 +54,7 @@ img {
 }
 
 .header__search-btn {
-    background: url('/images/search-icon.svg') no-repeat center / contain;
+    background: url('images/search-icon.svg') no-repeat center / contain;
     width: 16px;
     height: 16px;
     border: none;
@@ -223,7 +223,7 @@ img {
     border: none;
     width: 28px;
     height: 20px;
-    background: url('/images/burger-icon.svg') no-repeat center / contain;
+    background: url('images/burger-icon.svg') no-repeat center / contain;
     cursor: pointer;
 }
 
